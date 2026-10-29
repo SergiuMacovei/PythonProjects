@@ -13,24 +13,24 @@ def print_hi(name):
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 # Variables
 
-# Step 1: Ask the user for a space-separated mathematical equation
+# Schritt 1: Formel als Text einlesen (z. B. "2 * 3 * 4")
 equation = (input("Enter your equation with spaces (e.g. 2 * 3 * 4):"))
 
-# Step 2: Split the input string into a list "numbers" of individual numbers and operators
-# Example: "2 * 3 * 4" becomes [´2´, ´*´,´3´,´*´, ´4´]
+# Schritt 2: Den Eingabe-String in eine Liste namens "numbers" aus Zahlen und Operatoren aufteilen
+# Beispiel: "2 * 3 * 4" wird zu [´2´, ´*´,´3´,´*´, ´4´]
 numbers = equation.split()
 
-# Step 3: Initialize the running result with the first number in the list
+# Schritt 3: Das Startergebnis auf die erste Zahl der Liste setzen
 result = float(numbers[0])
 
-# Step 4: Travel through the remaining items in steps of 2
-# Index 'i' targets operators (*, /, +, -)
-# Index 'i + 1' targets the next number right after the operator
+# Schritt 4: Gehe in 2er-Schritten durch die restlichen Elemente
+# Index 'i' greift auf die Operatoren (*, /, +, -) zu
+# Index 'i + 1' greift auf die nächste Zahl nach dem Operator zu
 for i in range(1,len(numbers),2):
     operator = numbers[i]
     next_num = float(numbers[i+1])
 
-# Step 5: Perform the calculation based on the current operator
+# Schritt 5: Führe die Berechnung basierend auf dem aktuellen Operator durch
     if operator == "*":
         result = result * next_num
     elif operator == "/":
